@@ -1,13 +1,23 @@
 const countriesRow = document.querySelector(".countries-row");
 const searchInput = document.querySelector(".search-input");
+
+const btnDark = document.querySelector(".btn-dark");
+btnDark.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
 let search = "";
 
 function getCountriesCards(el) {
-  return `<div class="card">
+  return `<a href = "#" class="card">
   <img src="${el.flags.svg}" alt="${el.name.common}" />
-  <h3>${el.name.common}</h3>
-  <p>${el.continents[0]}</p>
-    </div>`;
+  <div class = "card-info">  
+ <h3>${el.name.common}</h3>
+  <p>Population: ${el.population}</p>
+  <p>Region: ${el.region}</p>
+  <p>Capital: ${el.capital}</p>
+  </div>
+    </a>`;
 }
 
 async function getCountries() {

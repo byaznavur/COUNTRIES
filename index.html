@@ -13,13 +13,35 @@
     <title>COUNTRIES</title>
   </head>
   <body>
-    <header class="container">
-      <h2>COUNTRIES</h2>
+    <header>
+      <nav class="container">
+        <h2>Where in the world?</h2>
 
-      <input type="text" class="form-control search-input my-3" />
+        <button class="btn btn-dark">Dark Mode</button>
+      </nav>
     </header>
-    <main class="container">
-      <div class="countries-row"></div>
+    <main>
+      <div class="container">
+        <div class="wrappper">
+          <input
+            type="text"
+            placeholder="Search for a country"
+            class="form-control py-3 search-input my-3"
+          />
+
+          <select class="form-select py-3">
+            <option value="">Filter by Region</option>
+            <option value="">Africa</option>
+            <option value="">America</option>
+            <option value="">Asia</option>
+            <option value="">Europe</option>
+            <option value="">Oceania</option>
+          </select>
+        </div>
+      </div>
+      <section class="container">
+        <div class="countries-row"></div>
+      </section>
     </main>
     <footer></footer>
 
